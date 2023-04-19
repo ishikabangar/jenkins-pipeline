@@ -14,5 +14,14 @@ pipeline {
                     input('Do you want to proceed?')
                  }
              }
+         stage('Deploy') {
+                 parallel { 
+                            stage('Deploy start ') {
+                           steps {
+                                echo "Start the deploy .."
+                          } 
+                           }
+                           }
+                           }
     }
 }
