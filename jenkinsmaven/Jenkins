@@ -6,11 +6,13 @@ pipeline {
             steps {
                 // Get some code from a GitHub repository
                 git url:'https://github.com/ishikabangar/jenkins-pipeline.git', branch:'main'
-
-                
-            }
-
-           
+             
+            }           
         }
+         stage('Test') {
+             steps {
+                    input('Do you want to proceed?')
+                 }
+             }
     }
 }
